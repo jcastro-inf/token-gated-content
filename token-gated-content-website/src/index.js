@@ -6,7 +6,7 @@ import './index.css'
 import App from './App'
 import TokenGatedContent from './TokenGatedContent'
 import Admin from './Admin'
-
+import CreateItem from './pages/CreateItem'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
@@ -16,6 +16,7 @@ ReactDOM.render(
 				<Route path="/" element={<App />} />
 				<Route path="tokengatedcontent/:tokenAddress/:tokenId" element={<TokenGatedContent />} />
 				<Route path="admin/" element={<Admin />} />
+				<Route path="admin/createitem" element={<CreateItem />} />
 			</Routes>
 		</Router>
 	</React.StrictMode>,

@@ -5,6 +5,7 @@ require('dotenv').config()
 const Endpoints = require('./imports/endpoints')
 const Database = require('./imports/database')
 const TokenGatedContent = require('./imports/model/TokenGatedContent')
+const FileUpload = require('./imports/fileupload')
 
 class Modules {
 	constructor(app) {
@@ -30,6 +31,7 @@ class Modules {
 	async registerAPI() {
 		this.endpoints = new Endpoints(this.app, this.sequelize)
 		this.tokenGatedContent = new TokenGatedContent(this.app, this.sequelize)
+		this.fileupload = new FileUpload(this.app)
 
 		this.reegistered = true
 	}
