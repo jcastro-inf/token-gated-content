@@ -70,6 +70,7 @@ function Admin() {
 		<div>
 			<h1> Admin page</h1>
 			<TokenGatedContentTable columns={columns} data={data} />
+			<a href="/admin/createitem">Create item</a>
 		</div>
 	)
 }
